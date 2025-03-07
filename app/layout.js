@@ -1,6 +1,6 @@
 import { Barlow_Condensed, Hanken_Grotesk } from "next/font/google";
-import Header from "./components/common/Header";
-import Footer from "./components/common/Footer";
+import Header from "./ui/components/common/Header";
+import Footer from "./ui/components/common/Footer";
 import "./globals.css";
 
 const barlowSans = Barlow_Condensed({
@@ -24,8 +24,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${barlowSans.variable} ${hankenSans.variable}`}>
-      <body className="antialiased">
+    <html lang="en" >
+      <body className={`${barlowSans.variable} ${hankenSans.variable} antialiased`}>
         <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-1">{children}</main>

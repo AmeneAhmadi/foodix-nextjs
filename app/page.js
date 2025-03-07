@@ -1,16 +1,17 @@
 import Image from "next/image";
-import Hero from "./components/home/Hero";
-import Category from "./components/home/Category";
-import About from "./components/home/About";
-import OfferCombo from "./components/home/OfferCombo";
-import WhyChooseUs from "./components/home/WhyChooseUs";
-import Booking from "./components/common/Booking";
-import Menu from "./components/home/Menu";
-import Gallery from "./components/home/Gallery";
-import Team from "./components/home/Team";
-import Testimonial from "./components/home/Testimonial";
-import Blog from "./components/home/Blog";
-import BackToTop from "./components/common/BackToTop";
+import Hero from "./ui/components/home/Hero/page";
+import Category from "./ui/components/home/Category";
+import About from "./ui/components/home/About";
+import OfferCombo from "./ui/components/home/OfferCombo/page";
+import WhyChooseUs from "./ui/components/home/WhyChooseUs";
+import Booking from "./ui/components/common/Booking";
+import Menu from "./ui/components/home/Menu";
+import Gallery from "./ui/components/home/Gallery";
+import Team from "./ui/components/home/Team";
+import Testimonial from "./ui/components/home/Testimonial";
+import Blog from "./ui/components/home/Blog";
+import BackToTop from "./ui/components/common/BackToTop";
+
 
 export default function Home() {
   return (

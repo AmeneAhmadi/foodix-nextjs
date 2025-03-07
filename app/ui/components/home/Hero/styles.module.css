@@ -1,0 +1,26 @@
+@keyframes translateBg {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-2250px, 0, 0);
+    transform: translate3d(-2250px, 0, 0);
+  }
+}
+
+.animatedBackground {
+  animation: translateBg 40s linear infinite;
+  background-image: url("/assets/images/hero/hero-four_bg.png");
+}
+
+.heroBg {
+  background-image: url("/assets/images/hero-four_bg.png");
+  width: 5000%;
+  height: 100%;
+  background-color: rgb(3, 3, 3);
+  z-index: -1;
+  background-repeat: repeat-x;
+  background-size: 2250px auto;
+  transform: translate3d(0, 0, 0);
+}
