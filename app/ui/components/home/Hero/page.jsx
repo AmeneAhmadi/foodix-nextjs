@@ -58,8 +58,8 @@ export default function Hero() {
                   <a
                     href="#"
                     className={clsx(
-                      "font-hanken bg-[var(--primary-color)] visited:bg-[var(--secondary-color)]",
-                      "text-white rounded-lg text-xl py-4 px-11 font-bold"
+                      "font-hanken bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]",
+                      "text-white rounded-lg text-xl py-4 px-11 font-bold transition-colors"
                     )}
                   >
                     Order Now
@@ -101,6 +101,7 @@ export default function Hero() {
                       fill
                       priority
                       className="object-contain"
+                      sizes="w-full sm:w-[90%] lg:w-[65%] xl:w-[90%]"
                     />
                   </div>
                 </div>

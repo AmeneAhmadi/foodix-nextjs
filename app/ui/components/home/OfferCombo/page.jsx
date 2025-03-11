@@ -16,7 +16,12 @@ export default function OfferCombo() {
               <Image src="/assets/images/bn-img-6.png" alt="offer" fill />
             </div>
           </div>
-          <div className="sm:px-6 md:px-8 lg:px-10 xl:px-24 mx-auto flex flex-col lg:flex-row items-center justify-between">
+          <div
+            className={clsx(
+              "sm:px-6 md:px-8 lg:px-10 xl:px-24 mx-auto ",
+              "flex flex-col lg:flex-row items-center justify-between"
+            )}
+          >
             <div
               className={clsx(
                 inView ? "animate-fadeInLeft opacity-100" : "opacity-0",
@@ -50,7 +55,10 @@ export default function OfferCombo() {
               >
                 <a
                   href="#"
-                  className="font-hanken bg-[var(--primary-color)] capitalize text-white rounded-lg text-xl py-4 px-11 font-bold"
+                  className={clsx(
+                    "font-hanken bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]",
+                    "capitalize text-white rounded-lg text-xl py-4 px-11 font-bold transition-colors"
+                  )}
                 >
                   read more
                 </a>

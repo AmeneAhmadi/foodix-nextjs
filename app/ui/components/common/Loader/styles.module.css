@@ -1,0 +1,32 @@
+@keyframes spin-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.outerCircle {
+  animation: spin-right 1s linear infinite;
+  -webkit-animation: spin-right 1s linear infinite;
+}
+
+.middleCircle {
+  animation: spin-left 1s linear infinite;
+  -webkit-animation: spin-left 1s linear infinite;
+}
+
+.innerCircle {
+  animation: spin-right 1s linear infinite;
+  -webkit-animation: spin-right 1s linear infinite;
+}

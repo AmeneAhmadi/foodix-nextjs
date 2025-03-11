@@ -83,6 +83,14 @@ body {
   opacity: 0;
 }
 
+.animate-fadeInUp-fast {
+  animation: fadeInUp 0.2s ease-in-out forwards;
+  -webkit-animation: fadeInUp 0.2s ease-in-out forwards;
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  opacity: 0;
+}
+
 @keyframes fadeInLeft {
   0% {
     opacity: 0;

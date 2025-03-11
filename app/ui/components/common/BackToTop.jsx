@@ -45,15 +45,15 @@ export default function BackToTop() {
     <button
       onClick={scrollToTop}
       className={clsx(
-        "fixed flex items-center justify-center cursor-pointer",
-        "bottom-8 right-8 bg-[var(--primary-color)] text-white p-4 rounded-full",
+        "fixed flex items-center justify-center cursor-pointer z-50",
+        "bottom-8 right-8 bg-[var(--primary-color)] text-white p-2.5 sm:p-3.5 md:p-4 rounded-full",
         "shadow-lg transition-all duration-300 ease-in-out transform",
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       )}
       aria-label="Back to top"
-      aria-hidden={!isVisible}
+      tabIndex={isVisible ? 0 : -1}
     >
-      <IoChevronUp size={24} />
+      <IoChevronUp size={20}/>
     </button>
   );
 }
