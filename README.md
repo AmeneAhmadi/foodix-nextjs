@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Restaurant Website
+
+A modern and user-friendly restaurant website built as a team project by Ameneh Ahmadi, Ghazaleh Karmpour, and Sajjad Nikghalb. The platform allows users to browse food items, manage a shopping cart, complete orders, send messages to restaurant owners, reserve tables, and much more.
+
+## Features
+- **Browse Foods**: Explore a variety of dishes with detailed descriptions.
+- **Food Details**: View in-depth information about each dish, including ingredients, preparation steps, instructional videos, and user reviews.
+- **Shopping Cart**: Add, update, or remove items and proceed to checkout.
+- **Order Completion**: Seamlessly finalize your food orders.
+- **Contact Messaging**: Communicate directly with restaurant owners.
+- **Table Reservation**: Reserve a table for dining in.
+- **Image Gallery**: Browse a collection of high-quality images showcasing dishes and the restaurant ambiance.
+- **Food Blog Posts**: Discover culinary articles and recipes displayed in various engaging formats.
+- **Chefs Section**: Learn about the restaurant’s chefs, their expertise, and culinary backgrounds.
+- And Additional features to enhance the user experience.
+
+## Tech Stack
+- **React**: For building dynamic and responsive UI components.
+- **Next.js**: A React framework for server-side rendering and static site generation.
+
+## Team
+This project was collaboratively developed by:
+- **Ameneh Ahmadi**
+- **Ghazaleh Karmpour**
+- **Sajjad Nikghalb**
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to set up and run the project locally.
 
+### Prerequisites
+- **Node.js** (v16 or higher)
+- **npm** or **yarn**
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AmeneAhmadi/foodix-nextjs.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd foodix
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+   or
+   ```bash
+   yarn install
+   ```
+
+### Running the Project
+1. Start the development server:
+   ```bash
+   npm run dev
+   ```
+   or
+   ```bash
+   yarn dev
+   ```
+2. Open your browser and visit:
+   ```
+   http://localhost:3000
+   ```
+
+### Building for Production
+To create a production-ready build:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+```
+Then start the production server:
+```bash
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
+We welcome contributions! Please feel free to submit a pull request or open an issue for suggestions and improvements.
