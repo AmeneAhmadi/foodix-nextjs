@@ -4,37 +4,37 @@ export const headerMenuData = {
       title: "Home",
       submenu: [
         { title: "Home Restaurant", href: "/" },
-        { title: "Home Beef", href: "/beef" },
-        { title: "Home Burger", href: "/burger" },
-        { title: "Home Pizza", href: "/pizza" },
-        { title: "Home Sushi", href: "/sushi" },
+        // { title: "Home Beef", href: "/beef" },
+        // { title: "Home Burger", href: "/burger" },
+        // { title: "Home Pizza", href: "/pizza" },
+        // { title: "Home Sushi", href: "/sushi" },
       ],
     },
     {
       title: "Menu",
       submenu: [
-        { title: "Menu List One", href: "/menu-1" },
-        { title: "Menu List Two", href: "/menu-2" },
-        { title: "Menu Grid", href: "/menu-grid" },
-        { title: "Menu Details", href: "/menu-details" },
+        { title: "Menu List One", href: "/menu_one" },
+        { title: "Menu List Two", href: "/menu_two" },
+        { title: "Menu Grid", href: "/menu_grid" },
+        { title: "Menu Details", href: "/product/details" },
       ],
     },
     {
       title: "Pages",
       submenu: [
-        { title: "About Us", href: "/about" },
-        { title: "Our History", href: "/history" },
-        { title: "Our Chefs", href: "/chefs" },
-        { title: "Our Gallery", href: "/gallery" },
+        { title: "About Us", href: "/about_us" },
+        { title: "Our History", href: "/our_history" },
+        { title: "Our Chefs", href: "/our_chefs" },
+        { title: "Our Gallery", href: "/our_gallery" },
         { title: "FAQs", href: "/faqs" },
-        { title: "Error 404", href: "/404" },
+        { title: "Error 404", href: "/error_404" },
       ],
     },
     {
       title: "Shop",
       submenu: [
-        { title: "Our Shop", href: "/shop" },
-        { title: "Product Details", href: "/product" },
+        { title: "Our Shop", href: "/our_shop" },
+        { title: "Product Details", href: "/product/details" },
         { title: "Cart", href: "/cart" },
         { title: "Checkout", href: "/checkout" },
       ],
@@ -42,14 +42,14 @@ export const headerMenuData = {
     {
       title: "Blog",
       submenu: [
-        { title: "Blog Grid", href: "/blog" },
-        { title: "Blog Standard", href: "/blog-standard" },
-        { title: "Blog Details", href: "/blog-details" },
+        { title: "Blog Grid", href: "/blog_grid" },
+        { title: "Blog Standard", href: "/blog_standard" },
+        { title: "Blog Details", href: "/blog_details" },
       ],
     },
     {
       title: "Contact",
-      href: "/contact",
+      href: "/contact_us",
     },
   ],
 };
@@ -66,19 +66,19 @@ export const cartData = {
       image: "/assets/images/cart-2.jpg",
       title: "Artisanal Truffle Tango Sirloin",
       quantity: 1,
-      price: 940,
+      price: 850,
     },
     {
       image: "/assets/images/cart-3.jpg",
       title: "Smoked Paprika Perfection",
       quantity: 1,
-      price: 940,
+      price: 950,
     },
     {
       image: "/assets/images/cart-4.jpg",
       title: "Tandoori Temptation Tender",
       quantity: 1,
-      price: 940,
+      price: 200,
     },
   ],
 };
@@ -353,6 +353,354 @@ export const whyChooseUsData = {
       title: "Event & Party",
       caption: "We are passionate about serving fresh, flavorful",
       animation: "animate-fadeInUp",
+    },
+  ],
+};
+
+export const checkoutPaymentData = {
+  checkoutPaymentItems: [
+    {
+      title: "Cash On Delivery",
+      content:
+        "Pay with cash remains a simple and reliable choice, transcending the complexities of modern finance.",
+    },
+    {
+      title: "Direct Bank Transfer",
+      content:
+        "Please proceed with your payment directly into our bank account. Kindly use your Order ID as the payment reference. Your order will be processed once the payment reflects in our account.",
+    },
+    {
+      title: "Paypal",
+      content:
+        "You can make your payment via PayPal. If you don't have a PayPal account, you can use your credit card to complete the transaction.",
+    },
+  ],
+};
+
+export const variationOptionsData = {
+  variationOptions: [
+    { label: "Small", value: "small" },
+    { label: "Medium", value: "medium" },
+    { label: "Large", value: "large" },
+  ],
+};
+
+export const productRelatedItemsData = {
+  relatedItems: [
+    {
+      imageSrc: "/assets/images/releted-1.png",
+      title: "Cheese Pizza",
+      subtitle: "Melting mozzarella atop a crisp crust a timeless cheese pizza",
+    },
+    {
+      imageSrc: "/assets/images/releted-2.png",
+      title: "chicken pizza",
+      subtitle: "Melting mozzarella atop a crisp crust a timeless cheese pizza",
+    },
+    {
+      imageSrc: "/assets/images/releted-3.png",
+      title: "Garden veggie",
+      subtitle: "Melting mozzarella atop a crisp crust a timeless cheese pizza",
+    },
+  ],
+};
+
+export const ourChefsData = {
+  ourChefs: [
+    {
+      name: "John Carry",
+      position: "Executive Chef",
+      imageSrc: "/assets/images/team-8.jpg",
+      socialLinks: [
+        { facebook: "#" },
+        { twitter: "#" },
+        { linkedin: "#" },
+        { pinterest: "#" },
+      ],
+    },
+    {
+      name: " Alexa lora",
+      position: " Junior Chef",
+      imageSrc: "/assets/images/team-9.jpg",
+      socialLinks: [
+        { facebook: "#" },
+        { twitter: "#" },
+        { linkedin: "#" },
+        { pinterest: "#" },
+      ],
+    },
+    {
+      name: "Hony Smith",
+      position: "Junior Chef",
+      imageSrc: "/assets/images/team-10.jpg",
+      socialLinks: [
+        { facebook: "#" },
+        { twitter: "#" },
+        { linkedin: "#" },
+        { pinterest: "#" },
+      ],
+    },
+    {
+      name: "David Liam",
+      position: "Junior Chef",
+      imageSrc: "/assets/images/team-11.jpg",
+      socialLinks: [
+        { facebook: "#" },
+        { twitter: "#" },
+        { linkedin: "#" },
+        { pinterest: "#" },
+      ],
+    },
+    {
+      name: "Olivia Ava",
+      position: "Junior Chef",
+      imageSrc: "/assets/images/team-12.jpg",
+      socialLinks: [
+        { facebook: "#" },
+        { twitter: "#" },
+        { linkedin: "#" },
+        { pinterest: "#" },
+      ],
+    },
+    {
+      name: "John Jonson",
+      position: "Junior Chef",
+      imageSrc: "/assets/images/team-13.jpg",
+      socialLinks: [
+        { facebook: "#" },
+        { twitter: "#" },
+        { linkedin: "#" },
+        { pinterest: "#" },
+      ],
+    },
+  ],
+};
+export const galleryPageData = {
+  images: [
+    "/assets/images/gallery-1.jpg",
+    "/assets/images/gallery-2.jpg",
+    "/assets/images/gallery-3.jpg",
+    "/assets/images/gallery-4.jpg",
+    "/assets/images/gallery-5.jpg",
+    "/assets/images/gallery-6.jpg",
+    "/assets/images/gallery-7.jpg",
+    "/assets/images/gallery-8.jpg",
+    "/assets/images/gallery-9.jpg",
+    "/assets/images/gallery-10.jpg",
+  ],
+};
+
+export const contactUsData = {
+  contactInfo: [
+    {
+      id: 1,
+      icon: "location",
+      title: "Our Location",
+      firstText: "4140 Parker Rd. Allentown,",
+      secondText: "New Mexico 31134",
+    },
+    {
+      id: 2,
+      icon: "email",
+      title: "Email Us",
+      firstText: "foodixsupport@gmail.com",
+      secondText: "foodixinfo@gmail.com",
+    },
+    {
+      id: 3,
+      icon: "phone",
+      title: "Call Us",
+      firstText: "1+555-123 456 7890",
+      secondText: "+555-123 776 8875",
+    },
+  ],
+};
+
+export const blogDetailsCommentsData = {
+  comments: [
+    {
+      id: 1,
+      small: false,
+      name: "Albert Flores",
+      date: "May 25, 2023",
+      imageSrc: "/assets/images/comment-1.jpg",
+      comment:
+        "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse molestiae consequatur qui dolorem eum fugiat voluptas.",
+    },
+    {
+      id: 2,
+      small: true,
+      name: "Michel holder",
+      date: "May 25, 2023",
+      imageSrc: "/assets/images/comment-2.jpg",
+      comment:
+        "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse molestiae consequatur qui dolorem eum fugiat voluptas.",
+    },
+    {
+      id: 3,
+      small: false,
+      name: "Michel holder",
+      date: "May 25, 2023",
+      imageSrc: "/assets/images/comment-2.jpg",
+      comment:
+        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi consequatur.",
+    },
+  ],
+};
+export const blogPostsData = {
+  posts: [
+    {
+      id: 1,
+      text: "Flavorful Fusion: Exploring the Art of culinary blending",
+      date: " May 10, 2024",
+      imageSrc: "/assets/images/post-thumb-1.jpg",
+    },
+    {
+      id: 2,
+      text: "Chef Spotlight: Behind the scenes of culinary mastery",
+      date: " May 10, 2024",
+      imageSrc: "/assets/images/post-thumb-2.jpg",
+    },
+    {
+      id: 3,
+      text: "Flavorful Fusion: Exploring the Art of culinary blending",
+      date: " May 10, 2024",
+      imageSrc: "/assets/images/post-thumb-3.jpg",
+    },
+    {
+      id: 4,
+      text: "Exploring authentic cuisine from around the world",
+      date: " May 10, 2024",
+      imageSrc: "/assets/images/post-thumb-4.jpg",
+    },
+  ],
+};
+
+export const blogGridData = {
+  posts: [
+    {
+      subtitle: "creativity",
+      date: " May 25, 2024",
+      imageSrc: "/assets/images/blog-grid-1.jpg",
+      title: "Gourmet Griddl Masterpiece",
+      caption:
+        "Indulge your taste buds in a culinary adventure with our Testy Food.",
+    },
+    {
+      subtitle: "creativity",
+      date: " May 25, 2024",
+      imageSrc: "/assets/images/blog-grid-2.jpg",
+      title: "Deluxe Flavor Fusion Stack",
+      caption:
+        "Experience the artistry of our chefs as they elevate classic recipes.",
+    },
+    {
+      subtitle: "creativity",
+      date: " May 25, 2024",
+      imageSrc: "/assets/images/blog-grid-3.jpg",
+      title: "Regal Royale Delight",
+      caption:
+        "Each carefully selected ingredient to contributes the harmonious food.",
+    },
+    {
+      subtitle: "creativity",
+      date: " May 25, 2024",
+      imageSrc: "/assets/images/blog-grid-4.jpg",
+      title: "Elevate Epicurean Stack",
+      caption:
+        "As you move to the main ranging from rich and savory light and refreshing.",
+    },
+    {
+      subtitle: "creativity",
+      date: " May 25, 2024",
+      imageSrc: "/assets/images/blog-grid-5.jpg",
+      title: "Towering Taste Triumph",
+      caption:
+        "Join us celebrating the joy of cuisine delicious where  bite tells a story.",
+    },
+    {
+      subtitle: "creativity",
+      date: " May 25, 2024",
+      imageSrc: "/assets/images/blog-grid-6.jpg",
+      title: "Skyline Epicurean Delight",
+      caption:
+        "Savor the exquisite blend of flavors in our Testy Best Food collection.",
+    },
+  ],
+};
+
+export const aboutUsTestimonialData = {
+  testimonials: [
+    {
+      name: "David Liam",
+      date: "A week ago",
+      image: "/assets/images/author-1.jpg",
+      text: "Explore 'Our Gallery'—a visual symphony of delectable pizzas...",
+      rating: 4,
+    },
+    {
+      name: "Sophia Mia",
+      date: "2 days ago",
+      image: "/assets/images/author-2.jpg",
+      text: "I’ve never seen a pizza place care so much about the details.",
+      rating: 5,
+    },
+    {
+      name: "Emma Jacob",
+      date: "3 weeks ago",
+      image: "/assets/images/author-3.jpg",
+      text: "The freshness of the ingredients is obvious in every slice.",
+      rating: 5,
+    },
+  ],
+};
+
+export const faqLeftData = {
+  faqsLeft: [
+    {
+      question: "What is Sustainable Construction?",
+      answer:
+        "Commonly asked questions, concise answers. Streamlined for quick understanding. Commonly asked questions, concise answers. Streamlined for quick understanding.",
+    },
+    {
+      question: "What Are The Different Types of Construction?",
+      answer:
+        "Commonly asked questions, concise answers. Streamlined for quick understanding. Commonly asked questions, concise answers. Streamlined for quick understanding.",
+    },
+    {
+      question: "What’re The Stages of Construction Project?",
+      answer:
+        "Commonly asked questions, concise answers. Streamlined for quick understanding. Commonly asked questions, concise answers. Streamlined for quick understanding.",
+    },
+    {
+      question: "How Long Does It Take to Build?",
+      answer:
+        "Commonly asked questions, concise answers. Streamlined for quick understanding. Commonly asked questions, concise answers. Streamlined for quick understanding.",
+    },
+  ],
+};
+
+export const faqRightData = {
+  faqsRight: [
+    {
+      question: "What is Sustainable Construction?",
+      answer:
+        "Commonly asked questions, concise answers. Streamlined for quick understanding. Commonly asked questions, concise answers. Streamlined for quick understanding.",
+    },
+    {
+      question: "What Are The Different Types of Construction?",
+      answer:
+        "Commonly asked questions, concise answers. Streamlined for quick understanding. Commonly asked questions, concise answers. Streamlined for quick understanding.",
+    },
+    {
+      question: "What’re The Stages of Construction Project?",
+      answer:
+        "Commonly asked questions, concise answers. Streamlined for quick understanding. Commonly asked questions, concise answers. Streamlined for quick understanding.",
+    },
+    {
+      question: "How Long Does It Take to Build?",
+      answer:
+        "Commonly asked questions, concise answers. Streamlined for quick understanding. Commonly asked questions, concise answers. Streamlined for quick understanding.",
     },
   ],
 };

@@ -43,7 +43,7 @@ export default function Blog() {
             <div
               key={index}
               className={clsx(
-                "bg-gray-100 group cursor-pointer rounded-sm shadow-md hover:shadow-lg ",
+                "bg-gray-100 group rounded-sm shadow-md hover:shadow-lg ",
                 "transition-all duration-300",
                 inView ? "animate-fadeInUp opacity-100" : "opacity-0"
               )}
@@ -56,23 +56,25 @@ export default function Blog() {
                 />
               </div>
               <div className="p-8 bg-gray-100">
-                <div className="flex items-center gap-6 text-gray-500 text-sm mb-3">
+                <div className="flex items-center gap-6 text-black/50 mb-3 font-hanken">
                   <div className="flex items-center gap-2">
                     <FaRegUser size={16} />
-                    <span>By {post.author}</span>
+                    <span className="hover:text-[var(--secondary-color)]">By {post.author}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <IoChatbubbleOutline size={16} />
-                    <span>Comment ({post.comments})</span>
+                    <span className="hover:text-[var(--secondary-color)]">Comment ({post.comments})</span>
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold group-hover:text-green-600 transition-colors duration-300">
+                <div className="hover:text-[var(--secondary-color)]">
+                <h3 className="text-2xl font-bold  transition-colors duration-300">
                   {post.title}
                 </h3>
-                <h3 className="text-2xl font-bold mb-3 group-hover:text-green-600 transition-colors duration-300">
+                <h3 className="text-2xl font-bold mb-3 transition-colors duration-300">
                   {post.subtitle}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                </div>
+                <p className="text-gray-600 text-sm leading-relaxed font-hanken">
                   {post.description}
                 </p>
               </div>

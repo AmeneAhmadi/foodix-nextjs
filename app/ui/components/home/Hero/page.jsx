@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import clsx from "clsx";
+import Link from "next/link";
 
 export default function Hero() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
@@ -55,15 +56,15 @@ export default function Hero() {
                     "flex items-center justify-center py-4"
                   )}
                 >
-                  <a
-                    href="#"
+                  <Link
+                    href="/our_shop"
                     className={clsx(
                       "font-hanken bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]",
                       "text-white rounded-lg text-xl py-4 px-11 font-bold transition-colors"
                     )}
                   >
                     Order Now
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="order-1 xl:order-2 mb-8 sm:mb-10 md:mb-12 w-full">

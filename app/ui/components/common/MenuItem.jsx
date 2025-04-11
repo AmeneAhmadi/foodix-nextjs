@@ -8,6 +8,7 @@ export default function MenuItem({
   isActive,
   onMouseEnter,
   onMouseLeave,
+  headerTheme,
 }) {
   return (
     <div
@@ -19,7 +20,8 @@ export default function MenuItem({
         <Link
           href={item.href}
           className={clsx(
-            "text-white hover:text-[var(--primary-color)] ",
+            headerTheme === "black" ? "text-white" : "text-black",
+            " hover:text-[var(--primary-color)] cursor-pointer",
             "transition-colors px-5 py-8 text-lg capitalize font-bold tracking-wide inline-block"
           )}
         >
@@ -28,7 +30,8 @@ export default function MenuItem({
       ) : (
         <button
           className={clsx(
-            "text-white hover:text-[var(--primary-color)] ",
+            headerTheme === 'black' ? "text-white" : "text-black",
+            "hover:text-[var(--primary-color)] cursor-pointer",
             "transition-colors px-5 py-8 text-lg capitalize font-bold tracking-wide flex items-center"
           )}
         >

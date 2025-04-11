@@ -154,19 +154,20 @@ export default function Footer() {
                   <div>
                     <Image
                       src="/assets/images/logo-white.png"
-                      alt="logo"
-                      width={100}
-                      height={100}
+                      alt="Foodix Logo"
+                      width={150}
+                      height={50}
                       style={{
-                        width: '100px',
-                        height: 'auto',
+                        width: "auto",
+                        height: "auto",
                       }}
-                      className="w-[150px] h-auto"
-                    ></Image>
+                      priority
+                      className="object-contain"
+                    />
                   </div>
 
                   <div className="space-y-2">
-                    <p className="text-gray-400 font-semibold mb-3">
+                    <p className="font-hanken text-white/70 font-semibold mb-3">
                       Discover culinary delights recipes and inspiration in our
                       delightful food haven..
                     </p>
@@ -175,7 +176,7 @@ export default function Footer() {
                     <Link href="#" className="cursor-pointer">
                       <div
                         className={clsx(
-                          "w-8 h-8 text-gray-400 hover:text-white border border-gray-500 ",
+                          "w-8 h-8 text-white/70 hover:text-white border border-gray-500 ",
                           "rounded-full flex items-center justify-center hover:bg-[var(--primary-color)] ",
                           "hover:border-0 transition-all duration-300"
                         )}
@@ -186,7 +187,7 @@ export default function Footer() {
                     <Link href="#" className="cursor-pointer">
                       <div
                         className={clsx(
-                          "w-8 h-8 text-gray-400 hover:text-white border border-gray-500 ",
+                          "w-8 h-8 text-white/70 hover:text-white border border-gray-500 ",
                           "rounded-full flex items-center justify-center hover:bg-[var(--primary-color)] ",
                           "hover:border-0 transition-all duration-300"
                         )}
@@ -197,7 +198,7 @@ export default function Footer() {
                     <Link href="#" className="cursor-pointer">
                       <div
                         className={clsx(
-                          "w-8 h-8 text-gray-400 hover:text-white border border-gray-500 ",
+                          "w-8 h-8 text-white/70 hover:text-white border border-gray-500 ",
                           "rounded-full flex items-center justify-center hover:bg-[var(--primary-color)] ",
                           "hover:border-0 transition-all duration-300"
                         )}
@@ -208,7 +209,7 @@ export default function Footer() {
                     <Link href="#" className="cursor-pointer">
                       <div
                         className={clsx(
-                          "w-8 h-8 text-gray-400 hover:text-white border border-gray-500 ",
+                          "w-8 h-8 text-white/70 hover:text-white border border-gray-500 ",
                           "rounded-full flex items-center justify-center hover:bg-[var(--primary-color)] ",
                           "hover:border-0 transition-all duration-300"
                         )}
@@ -228,11 +229,11 @@ export default function Footer() {
                   <h3 className="text-xl sm:text-2xl font-bold mb-4 text-left text-[var(--white-color)] uppercase">
                     contact us
                   </h3>
-                  <ul className="space-y-2">
-                    <li className="text-gray-400 font-semibold mb-3">
+                  <ul className="space-y-2 font-hanken ">
+                    <li className="text-white/70 font-semibold mb-3">
                       1901 Thornridge Cir. Shiloh, Hawaii 81063
                     </li>
-                    <li className="text-gray-400 font-semibold mb-3">
+                    <li className="text-white/70 font-semibold mb-3">
                       <Link
                         href="#"
                         className="hover:text-[var(--primary-color)] transition-colors cursor-pointer"
@@ -240,7 +241,7 @@ export default function Footer() {
                         +88-344-667-999
                       </Link>
                     </li>
-                    <li className="text-gray-400 font-semibold mb-3">
+                    <li className="text-white/70 font-semibold mb-3">
                       <Link
                         href="#"
                         className="hover:text-[var(--primary-color)] transition-colors cursor-pointer"
@@ -261,42 +262,42 @@ export default function Footer() {
                   <h3 className="text-xl sm:text-2xl font-bold mb-4 text-left text-[var(--white-color)] uppercase">
                     quick link
                   </h3>
-                  <ul className="space-y-2">
-                    <li className="text-gray-400 font-semibold mb-3">
+                  <ul className="space-y-2 font-hanken capitalize">
+                    <li className="text-white/70 font-semibold mb-3">
                       <Link
-                        href="#"
+                        href="/"
                         className="hover:text-[var(--primary-color)] transition-colors cursor-pointer"
                       >
                         home
                       </Link>
                     </li>
-                    <li className="text-gray-400 font-semibold mb-3 ">
+                    <li className="text-white/70 font-semibold mb-3 ">
                       <Link
-                        href="#"
+                        href="/about_us"
                         className="hover:text-[var(--primary-color)] transition-colors cursor-pointer"
                       >
                         about us
                       </Link>
                     </li>
-                    <li className="text-gray-400 font-semibold mb-3 ">
+                    <li className="text-white/70 font-semibold mb-3 ">
                       <Link
-                        href="#"
+                        href="/our_shop"
                         className="hover:text-[var(--primary-color)] transition-colors cursor-pointer"
                       >
                         services
                       </Link>
                     </li>
-                    <li className="text-gray-400 font-semibold mb-3 ">
+                    <li className="text-white/70 font-semibold mb-3 ">
                       <Link
-                        href="#"
+                        href="/menu_one"
                         className="hover:text-[var(--primary-color)] transition-colors cursor-pointer"
                       >
                         our menu
                       </Link>
                     </li>
-                    <li className="text-gray-400 font-semibold mb-3">
+                    <li className="text-white/70 font-semibold mb-3">
                       <Link
-                        href="#"
+                        href="/our_gallery"
                         className="hover:text-[var(--primary-color)] transition-colors cursor-pointer"
                       >
                         gallery
@@ -315,20 +316,20 @@ export default function Footer() {
                   <h3 className="text-xl sm:text-2xl font-bold mb-4 text-left text-[var(--white-color)] uppercase">
                     opining time
                   </h3>
-                  <ul className="space-y-2">
-                    <li className="text-gray-400 font-semibold mb-3">
+                  <ul className="space-y-2 font-hanken ">
+                    <li className="text-white/70 font-semibold mb-3">
                       Monday: 10.00am - 05.00pm
                     </li>
-                    <li className="text-gray-400 font-semibold mb-3">
+                    <li className="text-white/70 font-semibold mb-3">
                       Tuesday: 10.20am - 05.30pm
                     </li>
-                    <li className="text-gray-400 font-semibold mb-3">
+                    <li className="text-white/70 font-semibold mb-3">
                       Wednesday: 10.30am - 05.50pm
                     </li>
-                    <li className="text-gray-400 font-semibold mb-3">
+                    <li className="text-white/70 font-semibold mb-3">
                       Thursday: 11.00am - 07.10pm
                     </li>
-                    <li className="text-gray-400 font-semibold mb-3">
+                    <li className="text-white/70 font-semibold mb-3">
                       Friday : Closed
                     </li>
                   </ul>
@@ -338,7 +339,7 @@ export default function Footer() {
           </div>
           <hr className="border-gray-800 w-full" />
           <div className="max-w-screen-xl py-5 mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-gray-400 font-semibold text-center">
+            <p className="text-white/60 font-hanken font-semibold text-center">
               © 2024 All rights reserved design by Pixelfit
             </p>
           </div>

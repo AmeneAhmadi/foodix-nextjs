@@ -3,8 +3,32 @@ import Link from "next/link";
 import { useInView } from "react-intersection-observer";
 import { BiDish } from "react-icons/bi";
 import clsx from "clsx";
+import { useState } from "react";
+import MessageBox from "../common/MessageBox";
+import { useReservationContext } from "../../contexts/reservation/ReservationContext";
 export default function Booking() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    date: "",
+    people: "",
+  });
+  const [showMessage, setShowMessage] = useState(false);
+  const { bookingTable } = useReservationContext();
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    bookingTable(formData);
+    setFormData({ name: "", email: "", phone: "", date: "", people: "" });
+    setShowMessage(true);
+    setTimeout(() => {
+      setShowMessage(false);
+    }, 4000);
+  };
   return (
     <section ref={ref} className="w-full">
       <div className="w-full h-auto bg-[url('/assets/images/offer-bg1.jpg')] bg-cover bg-center bg-no-repeat">
@@ -62,16 +86,22 @@ export default function Booking() {
                     <h2 className="uppercase text-white text-3xl font-bold text-center mb-12">
                       create an booking table
                     </h2>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                       {/* Name and Email */}
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-7">
                         <input
                           type="text"
+                          name="name"
+                          onChange={handleChange}
+                          required
                           placeholder="Enter your name"
                           className="w-full px-6 py-[20px] rounded-lg bg-[#20ac44] text-white placeholder-white border border-[#37b557] focus:outline-none"
                         />
                         <input
                           type="email"
+                          name="email"
+                          onChange={handleChange}
+                          required
                           placeholder="Enter your email"
                           className="w-full px-6 py-[20px] rounded-lg bg-[#20ac44] text-white placeholder-white focus:outline-none border border-[#37b557]"
                         />
@@ -81,18 +111,29 @@ export default function Booking() {
                       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-7 relative">
                         <input
                           type="tel"
+                          name="phone"
+                          onChange={handleChange}
+                          required
                           placeholder="Enter your phone"
                           className="w-full px-6 py-[20px] rounded-lg bg-[#20ac44] text-white placeholder-white focus:outline-none border border-[#37b557]"
                         />
                         <input
                           type="date"
+                          name="date"
+                          onChange={handleChange}
+                          required
                           className="w-full px-6 py-[20px] rounded-lg bg-[#20ac44] text-white placeholder-white focus:outline-none border border-[#37b557] [color-scheme:dark]"
                         />
                       </div>
 
                       {/* List of people */}
                       <div className="mb-4">
-                        <select className="w-full px-4 py-5 rounded-lg bg-[#20ac44] text-white focus:outline-none mb-7 border border-[#37b557]">
+                        <select
+                          name="people"
+                          onChange={handleChange}
+                          required
+                          className="w-full px-4 py-5 rounded-lg bg-[#20ac44] text-white focus:outline-none mb-7 border border-[#37b557]"
+                        >
                           <option value="">Select people</option>
                           <option value="people-01">People-01</option>
                           <option value="people-02">People-02</option>
@@ -103,12 +144,12 @@ export default function Booking() {
                       </div>
 
                       {/* Submit Button */}
-                      <Link
-                        href="#"
+                      <button
+                        type="submit"
                         className="w-full py-4 rounded-lg bg-[var(--orange-color)] text-black font-bold text-lg hover:bg-[var(--primary-color)] transition duration-300 block text-center"
                       >
                         Book A Table
-                      </Link>
+                      </button>
                     </form>
                   </div>
                 </div>
@@ -117,6 +158,13 @@ export default function Booking() {
           </div>
         </div>
       </div>
+      {showMessage && (
+        <MessageBox
+          text="Your reservation has been successfully added. We will contact you soon."
+          type="success"
+          onClose={() => setShowMessage(false)}
+        />
+      )}
     </section>
   );
 }

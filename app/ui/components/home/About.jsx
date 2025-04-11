@@ -126,7 +126,7 @@ export default function About() {
               {/* CTA Button */}
               <div>
                 <Link
-                  href="test.html"
+                  href="/about_us"
                   className={clsx(
                     "inline-block px-8 sm:px-9 xl:px-11 py-4 sm:py-4 rounded-xl",
                     "bg-[var(--primary-color)] capitalize text-xl sm:text-2xl xl:text-2xl",

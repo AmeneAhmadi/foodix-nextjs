@@ -8,7 +8,7 @@ export default function IconicBox({ image, title, caption,animation }) {
   return (
     <div ref={ref}
       className={clsx(
-        "flex flex-col items-center justify-center gap-2 cursor-pointer",
+        "flex flex-col items-center justify-center gap-2",
         "bg-[var(--gray-light-color)] hover:bg-[var(--primary-color)]",
         "text-black hover:text-white",
         inView ? animation + " opacity-100" : "opacity-0",

@@ -4,6 +4,7 @@ import CountDownTimer from "../CountDownTimer";
 import styles from "./styles.module.css";
 import Image from "next/image";
 import clsx from "clsx";
+import { BiDish } from "react-icons/bi";
 
 export default function OfferCombo() {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
@@ -29,16 +30,9 @@ export default function OfferCombo() {
               )}
             >
               <div className="flex flex-col gap-4 items-center justify-center lg:justify-start">
-                <div className="flex items-center justify-center gap-2 w-full">
-                  <div className="relative w-6 h-6">
-                    <Image
-                      src="/assets/icons/food-tray.png"
-                      alt="offer"
-                      fill
-                      sizes="w-6 h-6"
-                    />
-                  </div>
-                  <span className="uppercase font-bold text-[var(--orange-color)] text-center lg:text-left">
+                <div className="flex items-center justify-center lg:justify-start gap-2 w-full text-[var(--orange-color)]">
+                  <BiDish size={20} />
+                  <span className="uppercase font-bold  text-center lg:text-left">
                     Get 25% Discount
                   </span>
                 </div>
@@ -54,7 +48,7 @@ export default function OfferCombo() {
                 )}
               >
                 <a
-                  href="#"
+                  href="/product/details"
                   className={clsx(
                     "font-hanken bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]",
                     "capitalize text-white rounded-lg text-xl py-4 px-11 font-bold transition-colors"
