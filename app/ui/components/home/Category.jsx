@@ -26,7 +26,7 @@ export default function Category() {
           our Categories
         </h2>
         <Link
-          href="#"
+          href="/menu_grid"
           className={clsx(
             "py-4 px-10 rounded-xl border border-[var(--primary-color)] capitalize text-2xl font-semibold text-[var(--text-color)]",
             inView ? "animate-fadeInDown opacity-100" : "opacity-0",

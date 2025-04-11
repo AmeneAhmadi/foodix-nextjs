@@ -57,7 +57,7 @@ export default function CartModal({ isOpen, onClose }) {
               </div>
               <div className={clsx("flex items-center justify-center py-4")}>
                 <a
-                  href="#"
+                  href="/checkout"
                   className={clsx(
                     "font-hanken bg-[var(--primary-color)] hover:bg-[var(--secondary-color)]",
                     "text-white rounded-lg text-sm sm:text-lg py-4 px-11 font-bold transition-colors"

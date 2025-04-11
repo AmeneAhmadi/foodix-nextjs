@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import ProductCard from "../menu/ProductCard";
+import ProductCard from "./ProductCard";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import CustomDropdown from "./CustomDropdown";
 import { useProductContext } from "../../contexts/product/ProductContext";

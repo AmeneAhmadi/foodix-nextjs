@@ -22,8 +22,6 @@ export default function MenuDetails() {
   const [count, setCount] = useState(null);
   const [selectedSize, setSelectedSize] = useState("");
   const [isِDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState(1);
-  const [showContent, setShowContent] = useState(true);
   const [showMessage, setShowMessage] = useState(false);
   const searchParams = useSearchParams();
   const id = searchParams.get("id") || 1;
@@ -47,21 +45,32 @@ export default function MenuDetails() {
       setProduct(foundProduct);
       setCount(productInCart?.quantity || 1); // Set the initial count based on the product's quantity in cart
     }
-  }, [id, state.products]);
+  }, [id, state.products, cartState.cartItems]);
 
   if (!product) return <div>Loading...</div>; // Loading state
 
   const { relatedItems } = productRelatedItemsData;
+  const updateCartQuantity = (product, change) => {
+    const productInCart = cartState.cartItems.find(
+      (item) => item.id === Number(id)
+    );
+    if (productInCart) {
+      const newCount = productInCart.quantity + change;
+      if (newCount > 0) {
+        addProductToCard(product, change);
+      }
+    }
+  };
   const decrementQuantity = (product) => {
     if (count > 1) {
       setCount((prev) => prev - 1);
-      addProductToCard(product, -1);
+      updateCartQuantity(product, -1);
     }
   };
 
   const incrementQuantity = (product) => {
     setCount((prev) => prev + 1);
-    addProductToCard(product, 1);
+    updateCartQuantity(product, 1);
   };
 
   return (

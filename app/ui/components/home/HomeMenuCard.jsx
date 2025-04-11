@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function HomeMenuCard({ thumb, title, caption, cost }) {
+export default function HomeMenuCard({ item, index }) {
   const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: true });
   return (
     <div
@@ -17,27 +17,27 @@ export default function HomeMenuCard({ thumb, title, caption, cost }) {
     >
       <div className="relative flex flex-row gap-4 items-center">
         <Image
-          src={`/assets/images/${thumb}`}
+          src={`/assets/images/${item.thumb}`}
           alt="menu"
           width={70}
           height={70}
           style={{
-            width: '70px',
-            height: 'auto',
+            width: "70px",
+            height: "auto",
           }}
         />
         <div className="flex flex-col gap-1">
-          <Link href="#" className="text-2xl font-bold group-hover:text-white">
-            <h4>{title}</h4>
+          <Link href={`/product/details?id=${index+1}`} className="text-2xl font-bold group-hover:text-white">
+            <h4>{item.title}</h4>
           </Link>
           <p className="font-hanken text-[var(--text-color)] text-sm font-medium group-hover:text-white">
-            {caption}
+            {item.caption}
           </p>
         </div>
       </div>
       <div className="h-13">
         <p className="text-2xl font-bold text-[var(--primary-color)] group-hover:text-white">
-          ${cost}
+          ${item.cost}
         </p>
       </div>
     </div>

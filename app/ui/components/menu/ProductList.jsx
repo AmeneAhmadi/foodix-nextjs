@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { useProductContext } from "../../contexts/product/ProductContext";
-import ProductCard from "./ProductCard";
+import ProductCard from "../ourShop/ProductCard";
 
 export default function ProductList({}) {
   const { state } = useProductContext();

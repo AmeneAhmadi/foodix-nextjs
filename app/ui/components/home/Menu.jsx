@@ -36,8 +36,8 @@ export default function Menu() {
         </div>
         <div className="w-full">
           <div className="my-12 grid grid-cols-1 lg:grid-cols-2 gap-7 place-items-center w-full mx-auto ">
-            {boxes.map((box, index) => (
-              <HomeMenuCard key={index} {...box} />
+            {boxes.map((item, index) => (
+              <HomeMenuCard key={index} item={item} index={index} />
             ))}
           </div>
         </div>
